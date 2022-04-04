@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript counter</title>
+</head>
+
+<body>
+    <h1>Counter</h1>
+    <hr />
+    <h2 id="counterH2"></h2>
+    <button id="incr">+</button>
+    <button id="decr">-</button>
+
+    <script>
+        var counterH2 = document.getElementById('counterH2')
+        var incrBtn = document.getElementById('incr')
+        var decrBtn = document.getElementById('decr')
+
+        var counter = 0;
+
+        function render() {
+            counterH2.innerHTML = counter
+        }
+        render()
+
+        incrBtn.onclick = function () {
+            counter++;
+            render()
+        }
+
+        decrBtn.onclick = function () {
+            counter--;
+            render();
+        }
+    </script>
+
+
+</body>
+
+</html>
